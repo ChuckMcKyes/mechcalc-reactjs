@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import Sidebar from "./sidebar";
+import HomePage from "./homepage";
+import ShearPinCalc from "./shearpincalc";
+import PumpHead from "./pumphead";
+import PumpPower from "./pumppower";
+import MotorPower from "./motorpower";
+import "./App.css";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+    <>
+        <Helmet>
+            <title>Engineering Calculators</title>
+            <meta name="description" content="engineering calculators" />
+            <meta name="keywords" content="engineering, calculators, pump,
+                shearpin, torque, electric motor, power" />
+        </Helmet>
+        <div className="mastergrid">
+            <div className="titlebox">
+                <p>Engineering Calculators</p>
+            </div>
+            <Router>
+                <div>
+                    <Sidebar />
+                </div>
+                <div>
+                    <Switch>
+                        <Route exact path="/">
+                            <HomePage />
+                        </Route>
+                        <Route path="/shearpins">
+                            <ShearPinCalc />
+                        </Route>
+                        <Route path="/pumphead">
+                            <PumpHead />
+                        </Route>
+                        <Route path="/pumppower">
+                            <PumpPower />
+                        </Route>
+                        <Route path="/motorpower">
+                            <MotorPower />
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
+        </div>
+    </>
+    );
 }
 
 export default App;

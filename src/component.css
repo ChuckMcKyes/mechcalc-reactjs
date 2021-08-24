@@ -1,0 +1,68 @@
+
+html {
+    margin: 4;
+    padding: 4;
+    font-family: sans-serif;
+    background-color: #28a591;
+}
+
+.homepage-text{
+    width: 500px;
+}
+
+.mastergrid {
+    display: grid;
+    grid-template-columns: 100px 800px;
+    grid-template-rows: 50px 440px;
+    gap: 10px;
+}
+
+.titlebox {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-left: 1rem;
+    text-indent: 1.2rem;
+    font-weight: bold;
+    background-color: #A59128;
+    border-radius: 6px;
+}
+
+.pagegrid {
+    display: grid;
+    grid-template-columns: 440px 400px;
+    grid-template-rows: 440px;
+    gap: 10px;
+}
+
+.notes {
+    display: block;
+    margin-top: 60px;
+}
+
+.label {
+    text-align: right;
+}
+
+.input {
+    font-size: 1.1em;
+    background-color: #cccccc;
+    width: 120px;
+}
+
+.output {
+    font-size: 1.1em;
+    background-color: #999999;
+    width: 120px;
+}
+
+.imagecell {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px;
+}
+
+.radio-label {
+    padding: 4px;
+}
