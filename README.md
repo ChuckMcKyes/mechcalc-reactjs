@@ -4,6 +4,7 @@ This is a react app for engineering calculators. To run, on the command line typ
 <ul>
 <li>npx create-react-app</li>
 <li>Copy the files in the src folder to the new app src folder.</li>
-<li>npm start</li>
+<li>'npm start'</li>
 <li>Open a browser on whatever port the test server is running on.</li>
+<li>'npm run build' to create a server-ready version.
 </ul>
